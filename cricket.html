@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+    let computerChoice = '';
+    
+    let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
+    
+    if(randomNumber > 0 && randomNumber <= 1){
+        computerChoice = 'bat';
+    }else if(randomNumber > 1 && randomNumber <= 2){
+        computerChoice = 'ball';
+    }else{
+        computerChoice = 'stump';
+    }
+
+    let resultMsg;
+    if(computerChoice === 'bat'){
+        resultMsg = `It's a tie`;
+    }else if(computerChoice === 'ball'){
+        resultMsg = 'User has won';
+    }else{
+        resultMsg = 'Computer has won';
+    }
+
+    alert(`User chosen bat. Computer chosen ${computerChoice} -> ${resultMsg}`);
+    
+    ">Bat</button>
+    <button>Ball</button>
+    <button>Stump</button>
+
+    <!-- Javascript -->
+    <script>
+
+    </script>
+</body>
+</html>
