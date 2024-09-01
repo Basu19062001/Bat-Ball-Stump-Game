@@ -45,54 +45,54 @@
 
 
         <button class="btn"  onclick="
-        let computerChoice = '';
+        let computerChoiceMsg = '';
         
-        let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
+        let randomNo = Math.random() * 3; // This function generate random number  between 0 to 3
         
-        if(randomNumber > 0 && randomNumber <= 1){
+        if(randomNo > 0 && randomNo <= 1){
             computerChoice = 'bat';
-        }else if(randomNumber > 1 && randomNumber <= 2){
-            computerChoice = 'ball';
+        }else if(randomNo > 1 && randomNo <= 2){
+            computerChoiceMsg = 'ball';
         }else{
-            computerChoice = 'stump';
+            computerChoiceMsg = 'stump';
         }
     
-        let resultMsg;
-        if(computerChoice === 'bat'){
-            resultMsg = 'Computer has won';
-        }else if(computerChoice === 'ball'){
-            resultMsg = `It's a tie`;
+        let finalMsg;
+        if(computerChoiceMsg === 'bat'){
+            finalMsg = 'Computer has won';
+        }else if(computerChoiceMsg === 'ball'){
+            finalMsg = `It's a tie`;
         }else{
-            resultMsg = 'User has won';
+            finalMsg = 'User has won';
         }
     
-        alert(`User chosen ball. Computer chosen ${computerChoice} -> ${resultMsg}`);
+        alert(`User chosen ball. Computer chosen ${computerChoiceMsg} -> ${finalMsg}`);
         
         ">Ball</button>
         
         <button class="btn" onclick="
-        let computerChoice = '';
+        let computer_Choice = '';
         
-        let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
+        let random_Number = Math.random() * 3; // This function generate random number  between 0 to 3
         
-        if(randomNumber > 0 && randomNumber <= 1){
-            computerChoice = 'bat';
-        }else if(randomNumber > 1 && randomNumber <= 2){
-            computerChoice = 'ball';
+        if(random_Number > 0 && random_Number <= 1){
+            computer_Choice = 'bat';
+        }else if(random_Number > 1 && random_Number <= 2){
+            computer_Choice = 'ball';
         }else{
-            computerChoice = 'stump';
+            computer_Choice = 'stump';
         }
     
-        let resultMsg;
-        if(computerChoice === 'bat'){
-            resultMsg = 'User has won';
-        }else if(computerChoice === 'ball'){
-            resultMsg = 'Computer has won';
+        let result_Msg;
+        if(computer_Choice === 'bat'){
+            result_Msg = 'User has won';
+        }else if(computer_Choice === 'ball'){
+            result_Msg = 'Computer has won';
         }else{
-            resultMsg = `It's a tie`;
+            result_Msg = `It's a tie`;
         }
     
-        alert(`User chosen stump. Computer chosen ${computerChoice} -> ${resultMsg}`);
+        alert(`User chosen stump. Computer chosen ${computer_Choice} -> ${result_Msg}`);
         
         "
         >Stump</button>
