@@ -42,8 +42,60 @@
         >
           Bat
         </button>
-        <button class="btn">Ball</button>
-        <button class="btn">Stump</button>
+
+
+        <button class="btn"  onclick="
+        let computerChoice = '';
+        
+        let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
+        
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'bat';
+        }else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'ball';
+        }else{
+            computerChoice = 'stump';
+        }
+    
+        let resultMsg;
+        if(computerChoice === 'bat'){
+            resultMsg = 'Computer has won';
+        }else if(computerChoice === 'ball'){
+            resultMsg = `It's a tie`;
+        }else{
+            resultMsg = 'User has won';
+        }
+    
+        alert(`User chosen ball. Computer chosen ${computerChoice} -> ${resultMsg}`);
+        
+        ">Ball</button>
+        
+        <button class="btn" onclick="
+        let computerChoice = '';
+        
+        let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
+        
+        if(randomNumber > 0 && randomNumber <= 1){
+            computerChoice = 'bat';
+        }else if(randomNumber > 1 && randomNumber <= 2){
+            computerChoice = 'ball';
+        }else{
+            computerChoice = 'stump';
+        }
+    
+        let resultMsg;
+        if(computerChoice === 'bat'){
+            resultMsg = 'User has won';
+        }else if(computerChoice === 'ball'){
+            resultMsg = 'Computer has won';
+        }else{
+            resultMsg = `It's a tie`;
+        }
+    
+        alert(`User chosen stump. Computer chosen ${computerChoice} -> ${resultMsg}`);
+        
+        "
+        >Stump</button>
       </div>
     </div>
     <!-- Javascript -->
