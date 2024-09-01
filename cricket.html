@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cricket Game</title>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>Bat Ball Stump Game</h1>
-    <button onclick="
+    <link rel="stylesheet" href="cricket.css" />
+  </head>
+  <body>
+    <div class="cricket-container">
+      <div class="game-title">
+        <h1>Bat Ball Stump Game</h1>
+      </div>
+      <div class="btn-container">
+        <button
+          class="btn"
+          onclick="
     let computerChoice = '';
     
     let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
@@ -36,13 +38,15 @@
 
     alert(`User chosen bat. Computer chosen ${computerChoice} -> ${resultMsg}`);
     
-    ">Bat</button>
-    <button>Ball</button>
-    <button>Stump</button>
-
+    "
+        >
+          Bat
+        </button>
+        <button class="btn">Ball</button>
+        <button class="btn">Stump</button>
+      </div>
+    </div>
     <!-- Javascript -->
-    <script>
-
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>
