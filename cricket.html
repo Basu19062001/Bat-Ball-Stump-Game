@@ -6,6 +6,7 @@
     <title>Cricket Game</title>
     <link rel="stylesheet" href="cricket.css" />
   </head>
+
   <body>
     <div class="cricket-container">
       <div class="game-title">
@@ -15,90 +16,37 @@
         <button
           class="btn"
           onclick="
-    let computerChoice = '';
-    
-    let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
-    
-    if(randomNumber > 0 && randomNumber <= 1){
-        computerChoice = 'bat';
-    }else if(randomNumber > 1 && randomNumber <= 2){
-        computerChoice = 'ball';
-    }else{
-        computerChoice = 'stump';
-    }
-
-    let resultMsg;
-    if(computerChoice === 'bat'){
-        resultMsg = `It's a tie`;
-    }else if(computerChoice === 'ball'){
-        resultMsg = 'User has won';
-    }else{
-        resultMsg = 'Computer has won';
-    }
-
-    alert(`User chosen bat. Computer chosen ${computerChoice} -> ${resultMsg}`);
-    
-    "
-        >
+    let computerChoice = computerGenerateChoice();
+    let resultMsg = getResultMsg('bat',computerChoice);
+        showResult('bat',computerChoice,resultMsg);
+    "   >
           Bat
         </button>
 
-
-        <button class="btn"  onclick="
-        let computerChoiceMsg = '';
-        
-        let randomNo = Math.random() * 3; // This function generate random number  between 0 to 3
-        
-        if(randomNo > 0 && randomNo <= 1){
-            computerChoice = 'bat';
-        }else if(randomNo > 1 && randomNo <= 2){
-            computerChoiceMsg = 'ball';
-        }else{
-            computerChoiceMsg = 'stump';
-        }
-    
-        let finalMsg;
-        if(computerChoiceMsg === 'bat'){
-            finalMsg = 'Computer has won';
-        }else if(computerChoiceMsg === 'ball'){
-            finalMsg = `It's a tie`;
-        }else{
-            finalMsg = 'User has won';
-        }
-    
-        alert(`User chosen ball. Computer chosen ${computerChoiceMsg} -> ${finalMsg}`);
-        
-        ">Ball</button>
-        
-        <button class="btn" onclick="
-        let computer_Choice = '';
-        
-        let random_Number = Math.random() * 3; // This function generate random number  between 0 to 3
-        
-        if(random_Number > 0 && random_Number <= 1){
-            computer_Choice = 'bat';
-        }else if(random_Number > 1 && random_Number <= 2){
-            computer_Choice = 'ball';
-        }else{
-            computer_Choice = 'stump';
-        }
-    
-        let result_Msg;
-        if(computer_Choice === 'bat'){
-            result_Msg = 'User has won';
-        }else if(computer_Choice === 'ball'){
-            result_Msg = 'Computer has won';
-        }else{
-            result_Msg = `It's a tie`;
-        }
-    
-        alert(`User chosen stump. Computer chosen ${computer_Choice} -> ${result_Msg}`);
-        
+        <button
+          class="btn"
+          onclick="
+         computerChoice = computerGenerateChoice()
+         resultMsg = getResultMsg('ball',computerChoice);
+         showResult('ball',computerChoice,resultMsg);
         "
-        >Stump</button>
+        >
+          Ball
+        </button>
+
+        <button
+          class="btn"
+          onclick="
+        computerChoice = computerGenerateChoice()
+        resultMsg = getResultMsg('stump',computerChoice);
+        showResult('stump',computerChoice,resultMsg);
+        "
+        >
+          Stump
+        </button>
       </div>
     </div>
     <!-- Javascript -->
-    <script></script>
+    <script src="cricket.js"></script>
   </body>
 </html>
