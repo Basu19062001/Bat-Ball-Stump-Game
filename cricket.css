@@ -3,7 +3,7 @@
     padding: 0;
 }
 .cricket-container{
-    border: 2px solid darkgrey;
+    /* border: 2px solid darkgrey; */
     height: 250px;
     width: 350px;
     position: relative;
@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(230, 244, 248);
+    background-color: rgb(243, 230, 248);
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgb(139, 97, 0);
     
