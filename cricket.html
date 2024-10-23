@@ -19,7 +19,8 @@
     let computerChoice = computerGenerateChoice();
     let resultMsg = getResultMsg('bat',computerChoice);
         showResult('bat',computerChoice,resultMsg);
-    "   >
+    "
+        >
           Bat
         </button>
 
@@ -44,6 +45,10 @@
         >
           Stump
         </button>
+
+        <button class="btn" id="reset" onclick="localStorage.clear()
+          resetScore();
+        ">Reset</button>
       </div>
     </div>
     <!-- Javascript -->

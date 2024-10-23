@@ -1,11 +1,32 @@
-let score = {
-    Win: 0,
-    Lost: 0,
-    Tie: 0,
-    displayScore: function(){
+let scoreStr = localStorage.getItem('Score');
+let score;
+resetScore(scoreStr);
+// if(scoreStr !== undefined){
+//     score = scoreStr;
+// }else{
+// score = {
+//     Win: 0,
+//     Lost: 0,
+//     Tie: 0,
+    
+// };
+// }
+
+function resetScore(scoreStr){
+    score  = scoreStr ? JSON.parse(scoreStr) : {
+        Win: 0,
+        Lost: 0,
+        Tie: 0,
+        
+    };
+   
+    score.displayScore = function(){
         return `Win: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`;
-    },
-};
+    };
+}
+
+
+
 function computerGenerateChoice(){
     
     let randomNumber = Math.random() * 3; // This function generate random number  between 0 to 3
@@ -56,7 +77,8 @@ function getResultMsg(userMove, computerMove){
     }
 }
 
-function showResult(userMove, computerMove,result){
+function showResult(userMove, computerMove, result){
+    localStorage.setItem('Score', JSON.stringify(score));   
     // console.log(`Win: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`);
     
     alert(`User chosen ${userMove}. Computer chosen ${computerMove}
