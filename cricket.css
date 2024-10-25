@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
 }
+.main{
+    display: flex;
+}
 .cricket-container{
     /* border: 2px solid darkgrey; */
     height: 250px;
     width: 350px;
     position: relative;
-    left: 35%;
-    top: 100px;
+    left: 25%;
+    top: 180px; 
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,6 +21,7 @@
     box-shadow: 10px 5px 5px rgb(139, 97, 0);
     
 }
+
 .game-title {
     height: 40px;
     width: 100%;
@@ -44,4 +49,23 @@
 }
 .btn:active{
     background-color: rgb(234, 206, 245);
+}
+#out{
+    height: 30px; 
+
+}
+#result{
+    display: flex;
+}
+.output{
+    top: 20px;
+    height: 205px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+.User-move{
 }

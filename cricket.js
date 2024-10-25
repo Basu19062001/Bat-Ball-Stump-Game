@@ -17,12 +17,14 @@ function resetScore(scoreStr){
         Win: 0,
         Lost: 0,
         Tie: 0,
-        
+            
     };
    
     score.displayScore = function(){
-        return `Win: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`;
+        return `Score : Win: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`;
     };
+
+    showResult();
 }
 
 
@@ -79,11 +81,16 @@ function getResultMsg(userMove, computerMove){
 
 function showResult(userMove, computerMove, result){
     localStorage.setItem('Score', JSON.stringify(score));   
+    
+    document.querySelector('.User-move').innerText = userMove ? `User chosen ${userMove}` : '';
+    document.querySelector('.Computer-move').innerText = computerMove ?  `Computer chosen ${computerMove}` : '';
+    document.querySelector('.Result').innerText = result || '';
+    document.querySelector('.Score').innerText = score.displayScore();
     // console.log(`Win: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`);
     
-    alert(`User chosen ${userMove}. Computer chosen ${computerMove}
+    // alert(`User chosen ${userMove}. Computer chosen ${computerMove}
     
-        ${result}
+    //     ${result}
     
-        ${score.displayScore()}`);
+    //     ${score.displayScore()}`);
 }
